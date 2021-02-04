@@ -22,6 +22,13 @@ def captured_output():
 
 # implement this function
 def is_perfect(n):
+    sum = 0
+    for x in range(1,n):
+        if n%x == 0:
+            sum += x
+    if sum == n:
+        return True
+    return False
     pass
 
 # (3 points)
@@ -44,7 +51,7 @@ def multiples_of_3_and_5(n):
     for x in range(n):
         if x % 3 == 0 or x % 5 == 0:
             sum += x
-    print(sum)
+    return sum
     pass
 
 # (3 points)
