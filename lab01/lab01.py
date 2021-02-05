@@ -87,6 +87,21 @@ def test3():
 
 # implement this function
 def gen_pattern(chars):
+    x = len(chars)-1
+    length = len(chars)*3 + 1
+for y in range(len(chars)+1):
+    if y == len(chars):
+        string = chars[x:None:-1]+chars[1:len(chars)]
+        strJoin = '.'.join(string)
+        strOut = strJoin.center(length, '.')
+        print(strOut)
+    string1 = chars[x:(x-y):-1]
+    string2 = string1[0:len(string1)-1]
+    string2 = string2[::-1]
+    string = string1+string2
+    strJoin = '.'.join(string)
+    strOut = strJoin.center(length, '.')
+    print(strOut)
     pass
 
 def test4():
