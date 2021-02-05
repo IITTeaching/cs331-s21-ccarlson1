@@ -65,6 +65,14 @@ def test2():
 # EXERCISE 3
 #################################################################################
 def integer_right_triangles(p):
+    count = 0
+    for a in range(1,p+1):
+        for b in range(a+1,p+1):
+            for c in range(b+1,p+1):
+                if a+b+c == p:
+                    if a**2+b**2 == c**2:
+                        count += 1
+    return sum
     pass
 
 def test3():
